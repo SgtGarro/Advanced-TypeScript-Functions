@@ -13,3 +13,4 @@ const nicoUser: User = {
   username: 'Nicolas',
   role: ROLES.ADMIN,
 };
+export { ROLES, User };
