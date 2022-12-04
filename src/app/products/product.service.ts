@@ -26,7 +26,7 @@ const addProduct = (data: CreateProductDto) => {
 };
 
 const updateProduct = (
-  id: string | number,
+  id: Product['id'],
   changes: UpdateProductDto
 ): Product => {
   const index = products.findIndex((item) => item.id === id);
