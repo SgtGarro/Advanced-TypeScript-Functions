@@ -1,6 +1,10 @@
 import { faker } from '@faker-js/faker';
 
-import { addProduct, products } from './products/product.service';
+import {
+  addProduct,
+  products,
+  updateProduct,
+} from './products/product.service';
 
 addProduct({
   title: faker.commerce.productName(),
@@ -17,5 +21,7 @@ addProduct({
 
 console.log(products);
 
+const product = products[0];
+updateProduct(product.id, { title: 'New title', stock: 80 });
 // Cannot assign to 'id' becauuse it is a read-only
 // products[0].id = 15;
