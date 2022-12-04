@@ -10,6 +10,8 @@ interface CreateProductDto
 
 interface UpdateProductDto extends Partial<CreateProductDto> {}
 
-export { CreateProductDto, UpdateProductDto };
+interface FindProductDto extends Readonly<Partial<Product>> {}
+
+export { CreateProductDto, UpdateProductDto, FindProductDto };
 
 // interface UpdateProductDtoV2 extends Required<CreateProductDto> {}
