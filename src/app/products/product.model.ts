@@ -1,10 +1,9 @@
+import { BaseModel } from '../base/base.model';
 import { Category } from '../category/category.model';
 
 type Sizes = 'S' | 'M' | 'L' | 'XL';
-interface Product {
+interface Product extends BaseModel {
   id: string | number;
-  title: string;
-  createdAt: Date;
   stock: number;
   size?: Sizes;
   category: Category;
