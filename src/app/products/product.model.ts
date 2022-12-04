@@ -3,8 +3,8 @@ import { Category } from '../category/category.model';
 
 type Sizes = 'S' | 'M' | 'L' | 'XL';
 interface Product extends BaseModel {
-  id: string | number;
   stock: number;
+  title: string;
   size?: Sizes;
   category: Category;
 }

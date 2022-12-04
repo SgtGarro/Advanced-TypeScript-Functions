@@ -1,4 +1,4 @@
-import { addProduct } from './products/product.service';
+import { addProduct, products } from './products/product.service';
 
 addProduct({
   id: '1',
@@ -14,3 +14,6 @@ addProduct({
     updatedAt: new Date(),
   },
 });
+
+// Cannot assign to 'id' becauuse it is a read-only
+// products[0].id = 15;
