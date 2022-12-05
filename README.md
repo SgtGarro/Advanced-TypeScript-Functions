@@ -1,4 +1,15 @@
 # Advanced TypeScript Functions
+TypeScript has advanced functions that allow for a better development experience and reduce as many errors as possible.
+
+1. [Enum](#enum)
+2. [Tuple](#tuple)
+3. [Unknown](#unknown)
+4. [Never](#never)
+5. [Nullish Coalesing](#nullish-coalesing)
+6. [Default](#default)
+7. [Functions overload](#functions-overload)
+8. [Interfaces](#interfaces)
+<br>
 
 ## Enum
 ```ts
@@ -15,11 +26,15 @@ enum ROLES {
   CUSTOMER = 'customer',
 }
 ```
+<br>
+
 ## Tuple
 ```ts
 let myVariable: [number, string];
 myVariable = [10, 'string'];
 ```
+<br>
+
 ## Unknown
 ```ts
 let unknownVar: unknown;
@@ -27,6 +42,8 @@ unknownVar = 'string';
 unknownVar.toUpperCase();// ❌ Incorret way
 if (typeof unknownVar === 'string') unknownVar.toUpperCase(); // ✅ Correct way
 ```
+<br>
+
 ## Never
 ```ts
 function withoutEnd() {
@@ -35,6 +52,8 @@ function withoutEnd() {
   }
 };
 ```
+<br>
+
 ## Nullish Coalesing
 ```ts
 function myFunction(myString?: string, myNumber?: number) {
@@ -44,6 +63,8 @@ function myFunction(myString?: string, myNumber?: number) {
   }
 }
 ```
+<br>
+
 ## Default
 ```ts
 function myFunction(myString: string = 'Hello', myNumber?: number = 10) {
@@ -53,6 +74,8 @@ function myFunction(myString: string = 'Hello', myNumber?: number = 10) {
   }
 }
 ```
+<br>
+
 ## Functions overload
 ```ts
 function add(a: string, b: string): string;
@@ -62,6 +85,8 @@ function add(a: any, b: any): any {
   return a + b;
 }
 ```
+<br>
+
 ## Interfaces
 * Interface
 ```ts
@@ -70,6 +95,8 @@ interface MyInterface {
   myNumber: number;
 }
 ```
+<br>
+
 * Extends
 ``` ts
 interface MyInterface {
@@ -87,6 +114,8 @@ interface MyInterface2 extends MyInterface {
 //   myBoolean: boolean;
 // }
 ```
+<br>
+
 * Interface Omit
 ```ts
 interface MyInterface {
@@ -103,6 +132,8 @@ interface MyInterface2 extends Omit<MyInterface, 'myString'> {
 //   myBoolean: boolean;
 // }
 ```
+<br>
+
 * Interface Partial
 ```ts
 interface MyInterface {
@@ -117,6 +148,8 @@ interface MyInterface2 extends Partial<MyInterface> {}
 //   myNumber?: number;
 // }
 ```
+<br>
+
 * Interface Required
 ```ts
 interface MyInterface {
@@ -131,6 +164,8 @@ interface MyInterface2 extends Required<MyInterface> {}
 //   myNumber: number;
 // }
 ```
+<br>
+
 * Interface Readonly
 ```ts
 interface MyInterface {
